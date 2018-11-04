@@ -44,7 +44,7 @@
 
 
 #ifndef strtk_no_tr1_or_boost
-   //#define strtk_enable_lexical_cast
+   #define strtk_enable_lexical_cast
    #define strtk_enable_random
    #define strtk_enable_regex
 #endif
@@ -55,14 +55,14 @@
 
 #ifdef strtk_enable_random
    // Requires definition of a TR1 compatible random library header
-   #include <random>
-   //#include <boost/random.hpp>
+   //#include <random>
+   #include <boost/random.hpp>
 #endif
 
 #ifdef strtk_enable_regex
    // Requires definition of a TR1 compatible regex library header
-   #include <regex>
-   //#include <boost/regex.hpp>
+   //#include <regex>
+   #include <boost/regex.hpp>
 #endif
 
 #if __GNUC__  >= 7
